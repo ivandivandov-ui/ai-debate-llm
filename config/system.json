@@ -1,0 +1,44 @@
+{
+  "providers": {
+    "default": "openrouter",
+    "fallback": "google",
+    "timeout": 60000,
+    "retryAttempts": 3
+  },
+  "agents": {
+    "maxConcurrent": 10,
+    "timeout": 300000,
+    "defaultTemperature": 0.7,
+    "defaultMaxTokens": 4096
+  },
+  "debate": {
+    "maxRounds": 10,
+    "minVerificationRate": 0.7,
+    "enableLoop": true,
+    "convergenceThreshold": 0.9
+  },
+  "a2a": {
+    "turnLimit": {
+      "mode": "fixed",
+      "maxTurns": 10
+    },
+    "costGuard": {
+      "mode": "budget",
+      "maxBudget": 10,
+      "warnAt": 0.8
+    },
+    "roleAccess": {
+      "mode": "open"
+    }
+  },
+  "memory": {
+    "shortTermTTL": 3600000,
+    "maxEntries": 1000,
+    "enableRetrieval": true
+  },
+  "observability": {
+    "logLevel": "info",
+    "enableMetrics": true,
+    "enableTracing": false
+  }
+}

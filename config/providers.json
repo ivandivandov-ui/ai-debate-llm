@@ -1,0 +1,54 @@
+{
+  "models": [
+    {
+      "id": "anthropic/claude-3.5-sonnet",
+      "provider": "openrouter",
+      "name": "Claude 3.5 Sonnet",
+      "contextLength": 200000,
+      "supportsStreaming": true,
+      "supportsTools": true,
+      "pricing": { "inputPer1k": 0.003, "outputPer1k": 0.015 }
+    },
+    {
+      "id": "openai/gpt-4o",
+      "provider": "openrouter",
+      "name": "GPT-4o",
+      "contextLength": 128000,
+      "supportsStreaming": true,
+      "supportsTools": true,
+      "pricing": { "inputPer1k": 0.0025, "outputPer1k": 0.01 }
+    },
+    {
+      "id": "google/gemini-2.0-flash",
+      "provider": "google",
+      "name": "Gemini 2.0 Flash",
+      "contextLength": 1000000,
+      "supportsStreaming": true,
+      "supportsTools": true,
+      "pricing": { "inputPer1k": 0.0001, "outputPer1k": 0.0004 }
+    },
+    {
+      "id": "groq/llama3-8b-8192",
+      "provider": "groq",
+      "name": "Llama 3 8B",
+      "contextLength": 8192,
+      "supportsStreaming": false,
+      "supportsTools": false,
+      "pricing": { "inputPer1k": 0.00005, "outputPer1k": 0.00008 }
+    },
+    {
+      "id": "groq/llama3-70b-8192",
+      "provider": "groq",
+      "name": "Llama 3 70B",
+      "contextLength": 8192,
+      "supportsStreaming": false,
+      "supportsTools": false,
+      "pricing": { "inputPer1k": 0.00059, "outputPer1k": 0.00079 }
+    }
+  ],
+  "routing": {
+    "strategy": "latency",
+    "preferCached": true,
+    "enableFallback": true
+  }
+}

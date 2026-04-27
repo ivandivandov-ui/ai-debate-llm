@@ -1,0 +1,72 @@
+{
+  "roles": [
+    {
+      "id": "builder",
+      "name": "Builder",
+      "description": "Constructs solutions and proposals",
+      "color": "#4CAF50",
+      "canUseTools": true,
+      "canCommunicate": true,
+      "canVerify": false
+    },
+    {
+      "id": "critic",
+      "name": "Critic",
+      "description": "Critically evaluates and finds flaws",
+      "color": "#F44336",
+      "canUseTools": true,
+      "canCommunicate": true,
+      "canVerify": true
+    },
+    {
+      "id": "skeptic",
+      "name": "Skeptic",
+      "description": "Questions assumptions",
+      "color": "#FF9800",
+      "canUseTools": true,
+      "canCommunicate": true,
+      "canVerify": false
+    },
+    {
+      "id": "scientist",
+      "name": "Scientist",
+      "description": "Researches and investigates",
+      "color": "#2196F3",
+      "canUseTools": true,
+      "canCommunicate": true,
+      "canVerify": false
+    },
+    {
+      "id": "verifier",
+      "name": "Verifier",
+      "description": "Verifies factual accuracy",
+      "color": "#9C27B0",
+      "canUseTools": true,
+      "canCommunicate": true,
+      "canVerify": true
+    }
+  ],
+  "cognitive": [
+    {
+      "id": "fast",
+      "name": "Fast Thinking",
+      "temperature": 0.3,
+      "maxTokens": 2048,
+      "description": "Quick, intuitive responses"
+    },
+    {
+      "id": "slow",
+      "name": "Slow Reasoning",
+      "temperature": 0.7,
+      "maxTokens": 4096,
+      "description": "Deep, thorough analysis"
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "temperature": 1.0,
+      "maxTokens": 4096,
+      "description": "Novel, creative solutions"
+    }
+  ]
+}
