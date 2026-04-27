@@ -1,0 +1,58 @@
+{
+  "name": "synthesis-debate-system",
+  "version": "1.0.0",
+  "description": "Multi-agent debate system with A2A and MCP layers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "debate": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node scripts/demo.ts",
+    "test": "jest --config=jest.config.json",
+    "test:watch": "jest --config=jest.config.json --watch",
+    "test:coverage": "jest --config=jest.config.json --coverage",
+    "demo": "ts-node scripts/demo.ts",
+    "benchmark": "ts-node scripts/benchmark.ts",
+    "simulate": "ts-node scripts/simulate-debate.ts",
+    "load-test": "ts-node scripts/load-test.ts",
+    "cli": "ts-node src/cli.ts",
+    "start": "node scripts/start-dev.js",
+    "start:api": "ts-node src/api/rest/server.ts",
+    "start:web": "node frontend/node_modules/vite/bin/vite.js",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "debate",
+    "a2a",
+    "mcp",
+    "langgraph"
+  ]
+}
